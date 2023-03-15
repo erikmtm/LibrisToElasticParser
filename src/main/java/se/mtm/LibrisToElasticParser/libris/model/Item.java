@@ -11,9 +11,8 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class Item {
 
-
-    @SerializedName("meta")
+    @SerializedName("@id")
     @Expose
-    public Meta meta;
+    public String id;
 
 }

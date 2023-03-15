@@ -44,7 +44,7 @@ public class ElasticOperationsImpl implements ElasticOperations {
     private ElasticRepositoryTaxonomy elasticRepositoryTaxonomy;
 
     private static final Logger logger = LogManager.getLogger(ElasticOperationsImpl.class);
-    static BlockingQueue<String> controlNumbers = new LinkedBlockingDeque<>();
+    final BlockingQueue<String> controlNumbers = new LinkedBlockingDeque<>();
     final ExecutorService producers = Executors.newFixedThreadPool(10);
     final ExecutorService transfer = Executors.newFixedThreadPool(1);
     // final ExecutorService consumers = Executors.newFixedThreadPool(8);

@@ -69,7 +69,7 @@ public class LibrisXl {
             SearchResult searchResult = parseSearchResult(response.body());
             if (searchResult.items != null) {
                 for (Item i  : searchResult.items) {
-                    ids.add(i.meta.id + "/data.jsonld");
+                    ids.add(removeITFromId(i.id) + "/data.jsonld");
                 }
             }
             if (searchResult.next != null) {
@@ -81,7 +81,10 @@ public class LibrisXl {
         return ids;
     }
 
-
+    private static String removeITFromId(String id) {
+        String controlNumber = id.replace("#it", "");
+        return controlNumber;
+    }
     /**
      * Gets all MTM publications in Libris from a list of media numbers.
      */
