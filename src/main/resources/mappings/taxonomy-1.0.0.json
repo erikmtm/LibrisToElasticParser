@@ -1,0 +1,54 @@
+{
+  "properties": {
+    "Code": {
+      "type": "keyword"
+    },
+    "DocCount": {
+      "type": "long"
+    },
+    "Id": {
+      "type": "text"
+    },
+    "ScoreBoostSum": {
+      "type": "double"
+    },
+    "Suggest": {
+      "properties": {
+        "Value": {
+          "type": "completion",
+          "analyzer": "simple",
+          "preserve_separators": false,
+          "preserve_position_increments": true,
+          "max_input_length": 50,
+          "contexts": [
+            {
+              "name": "Vocab",
+              "type": "CATEGORY",
+              "path": "Vocab"
+            }
+          ]
+        }
+      }
+    },
+    "Value": {
+      "type": "text",
+      "fields": {
+        "autocomplete": {
+          "type": "text",
+          "analyzer": "autocomplete",
+          "search_analyzer": "autocomplete_search"
+        },
+        "dehyphenated": {
+          "type": "text",
+          "analyzer": "dehyphenation"
+        },
+        "keyword": {
+          "type": "keyword"
+        }
+      }
+    },
+    "Vocab": {
+      "type": "keyword"
+    }
+  }
+}

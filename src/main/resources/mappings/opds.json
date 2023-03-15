@@ -1,0 +1,1086 @@
+{
+  "mappings": {
+    "properties": {
+      "AccessRights": {
+        "properties": {
+          "DOWNLOAD": {
+            "type": "keyword"
+          },
+          "FreeAccess": {
+            "null_value": false,
+            "type": "boolean"
+          },
+          "LOAN": {
+            "type": "keyword"
+          },
+          "PREVIEW": {
+            "type": "keyword"
+          },
+          "SAMPLE": {
+            "type": "keyword"
+          },
+          "SUBSCRIBE": {
+            "type": "keyword"
+          },
+          "VIEW": {
+            "type": "keyword"
+          }
+        }
+      },
+      "AddedYear": {
+        "ignore_malformed": true,
+        "type": "integer"
+      },
+      "AgeGroup": {
+        "ignore_malformed": true,
+        "type": "integer"
+      },
+      "AuthorIds": {
+        "path": "Authors.Ids",
+        "type": "alias"
+      },
+      "Authors": {
+        "properties": {
+          "Id": {
+            "type": "text"
+          },
+          "Identifier": {
+            "type": "keyword"
+          },
+          "Ids": {
+            "type": "keyword"
+          },
+          "Name": {
+            "analyzer": "standard_asciifolding",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "Type": {
+            "type": "keyword"
+          }
+        }
+      },
+      "AvailableFormats": {
+        "type": "keyword"
+      },
+      "Categories": {
+        "type": "keyword"
+      },
+      "Category": {
+        "path": "Categories",
+        "type": "alias"
+      },
+      "Classification": {
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "ContractionLevel": {
+        "type": "keyword"
+      },
+      "Contributors": {
+        "analyzer": "standard_asciifolding",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "Cooperatives": {
+        "analyzer": "standard_asciifolding",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "CreatedDate": {
+        "type": "date"
+      },
+      "Description": {
+        "fields": {
+          "da": {
+            "analyzer": "danish",
+            "type": "text"
+          },
+          "de": {
+            "analyzer": "german",
+            "type": "text"
+          },
+          "dehyphenated": {
+            "analyzer": "dehyphenation",
+            "type": "text"
+          },
+          "en": {
+            "analyzer": "english",
+            "type": "text"
+          },
+          "fr": {
+            "analyzer": "french",
+            "type": "text"
+          },
+          "keyword": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "Duration": {
+        "ignore_malformed": true,
+        "type": "integer"
+      },
+      "DurationHours": {
+        "ignore_malformed": true,
+        "type": "integer"
+      },
+      "EditionNumbers": {
+        "type": "integer"
+      },
+      "EntityGroupIdentifier": {
+        "type": "keyword"
+      },
+      "EntityId": {
+        "type": "integer"
+      },
+      "Formats": {
+        "path": "AvailableFormats",
+        "type": "alias"
+      },
+      "FreeAccess": {
+        "path": "AccessRights.FreeAccess",
+        "type": "alias"
+      },
+      "Genre": {
+        "type": "keyword"
+      },
+      "HasSample": {
+        "type": "boolean"
+      },
+      "ID": {
+        "path": "LibraryIds",
+        "type": "alias"
+      },
+      "Id": {
+        "type": "keyword"
+      },
+      "InProduction": {
+        "path": "UnderProduction",
+        "type": "alias"
+      },
+      "Index": {
+        "properties": {
+          "em": {
+            "analyzer": "standard_asciifolding",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "fo": {
+            "analyzer": "standard_asciifolding",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "ne": {
+            "analyzer": "standard_asciifolding",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          }
+        }
+      },
+      "IsNew": {
+        "type": "boolean"
+      },
+      "IsPdf": {
+        "type": "boolean"
+      },
+      "IsPeriodical": {
+        "null_value": false,
+        "type": "boolean"
+      },
+      "Isbn": {
+        "analyzer": "isbn",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "Items": {
+        "enabled": false,
+        "type": "object"
+      },
+      "LanguageCodes": {
+        "type": "keyword"
+      },
+      "LastMaxPopularityRank": {
+        "ignore_malformed": true,
+        "type": "unsigned_long"
+      },
+      "LastUpdate": {
+        "type": "date"
+      },
+      "LibraryId": {
+        "path": "LibraryIds",
+        "type": "alias"
+      },
+      "LibraryIds": {
+        "type": "keyword"
+      },
+      "Lix": {
+        "ignore_malformed": true,
+        "type": "integer"
+      },
+      "MainLanguage": {
+        "type": "keyword"
+      },
+      "MaterialCode": {
+        "type": "keyword"
+      },
+      "MediaCategories": {
+        "type": "keyword"
+      },
+      "MediaCategory": {
+        "path": "MediaCategories",
+        "type": "alias"
+      },
+      "MediaTypes": {
+        "type": "keyword"
+      },
+      "NarratorIds": {
+        "path": "Narrators.Ids",
+        "type": "alias"
+      },
+      "Narrators": {
+        "properties": {
+          "Id": {
+            "type": "integer"
+          },
+          "Identifier": {
+            "type": "keyword"
+          },
+          "Ids": {
+            "type": "keyword"
+          },
+          "Name": {
+            "analyzer": "standard_asciifolding",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "Type": {
+            "type": "keyword"
+          }
+        }
+      },
+      "Notes": {
+        "analyzer": "standard_asciifolding",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "OriginalLanguage": {
+        "type": "keyword"
+      },
+      "OriginalPublished": {
+        "path": "OriginalPublishedYear",
+        "type": "alias"
+      },
+      "OriginalPublishedYear": {
+        "ignore_malformed": true,
+        "type": "integer"
+      },
+      "ParentEntityGroup": {
+        "type": "keyword"
+      },
+      "PeriodicalCode": {
+        "type": "keyword"
+      },
+      "PeriodicalType": {
+        "type": "keyword"
+      },
+      "PopularityRank": {
+        "ignore_malformed": true,
+        "type": "unsigned_long"
+      },
+      "PubYear": {
+        "path": "AddedYear",
+        "type": "alias"
+      },
+      "PublicationCategories": {
+        "type": "keyword"
+      },
+      "PublicationCategory": {
+        "path": "PublicationCategories",
+        "type": "alias"
+      },
+      "Published": {
+        "path": "PublishedYear",
+        "type": "alias"
+      },
+      "PublishedDate": {
+        "type": "date"
+      },
+      "PublishedYear": {
+        "ignore_malformed": true,
+        "type": "integer"
+      },
+      "Publishers": {
+        "properties": {
+          "Id": {
+            "type": "integer"
+          },
+          "Identifier": {
+            "type": "keyword"
+          },
+          "Ids": {
+            "type": "keyword"
+          },
+          "Name": {
+            "analyzer": "standard_asciifolding",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "Type": {
+            "type": "keyword"
+          }
+        }
+      },
+      "Revision": {
+        "type": "long"
+      },
+      "SearchResultItem": {
+        "enabled": false,
+        "type": "object"
+      },
+      "SeriesId": {
+        "path": "SeriesIds",
+        "type": "alias"
+      },
+      "SeriesIds": {
+        "type": "keyword"
+      },
+      "SeriesPosition": {
+        "ignore_malformed": true,
+        "type": "integer"
+      },
+      "SeriesPositionVolume": {
+        "ignore_malformed": true,
+        "type": "integer"
+      },
+      "SeriesTitle": {
+        "analyzer": "titles",
+        "fields": {
+          "autocomplete": {
+            "analyzer": "autocomplete",
+            "search_analyzer": "autocomplete_search",
+            "type": "text"
+          },
+          "da": {
+            "analyzer": "danish",
+            "type": "text"
+          },
+          "de": {
+            "analyzer": "german",
+            "type": "text"
+          },
+          "dehyphenated": {
+            "analyzer": "dehyphenation",
+            "type": "text"
+          },
+          "en": {
+            "analyzer": "english",
+            "type": "text"
+          },
+          "fr": {
+            "analyzer": "french",
+            "type": "text"
+          },
+          "keyword": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "SeriesTotalCount": {
+        "ignore_malformed": true,
+        "type": "integer"
+      },
+      "SiblingEntityGroups": {
+        "properties": {
+          "EditionNumbers": {
+            "type": "integer"
+          },
+          "EntityGroupIdentifier": {
+            "type": "keyword"
+          },
+          "Id": {
+            "type": "keyword"
+          },
+          "Languages": {
+            "type": "keyword"
+          },
+          "MediaCategories": {
+            "type": "keyword"
+          },
+          "MediaTypes": {
+            "type": "keyword"
+          }
+        }
+      },
+      "SubTitle": {
+        "analyzer": "titles",
+        "fields": {
+          "da": {
+            "analyzer": "danish",
+            "type": "text"
+          },
+          "de": {
+            "analyzer": "german",
+            "type": "text"
+          },
+          "dehyphenated": {
+            "analyzer": "dehyphenation",
+            "type": "text"
+          },
+          "en": {
+            "analyzer": "english",
+            "type": "text"
+          },
+          "fr": {
+            "analyzer": "french",
+            "type": "text"
+          },
+          "keyword": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "SubjectIds": {
+        "path": "Subjects.Ids",
+        "type": "alias"
+      },
+      "Subjects": {
+        "properties": {
+          "Id": {
+            "type": "integer"
+          },
+          "Identifier": {
+            "type": "keyword"
+          },
+          "Ids": {
+            "type": "keyword"
+          },
+          "Name": {
+            "analyzer": "standard_asciifolding",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "Type": {
+            "type": "keyword"
+          }
+        }
+      },
+      "Subscription": {
+        "properties": {
+          "Checksum": {
+            "type": "keyword"
+          },
+          "contactInfo": {
+            "enabled": false,
+            "type": "object"
+          },
+          "frequency": {
+            "type": "keyword"
+          },
+          "frequencyCount": {
+            "type": "long"
+          },
+          "frequencyCustomText": {
+            "enabled": false,
+            "type": "object"
+          },
+          "href": {
+            "enabled": false,
+            "type": "object"
+          },
+          "price": {
+            "enabled": false,
+            "type": "object"
+          },
+          "subscriptionNeeded": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Suggest": {
+        "properties": {
+          "Illustrator": {
+            "analyzer": "standard",
+            "max_input_length": 50,
+            "preserve_position_increments": true,
+            "preserve_separators": true,
+            "type": "completion"
+          },
+          "SeriesTitle": {
+            "analyzer": "titles",
+            "max_input_length": 50,
+            "preserve_position_increments": true,
+            "preserve_separators": true,
+            "type": "completion"
+          },
+          "Title": {
+            "analyzer": "titles",
+            "max_input_length": 50,
+            "preserve_position_increments": true,
+            "preserve_separators": true,
+            "type": "completion"
+          }
+        }
+      },
+      "TargetAudience": {
+        "type": "keyword"
+      },
+      "Taxonomy": {
+        "properties": {
+          "Id": {
+            "type": "integer"
+          },
+          "Identifier": {
+            "type": "keyword"
+          },
+          "Ids": {
+            "type": "keyword"
+          },
+          "Name": {
+            "analyzer": "standard_asciifolding",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "Type": {
+            "type": "keyword"
+          }
+        }
+      },
+      "TaxonomyIds": {
+        "path": "Taxonomy.Ids",
+        "type": "alias"
+      },
+      "Title": {
+        "analyzer": "titles",
+        "fields": {
+          "autocomplete": {
+            "analyzer": "autocomplete",
+            "search_analyzer": "autocomplete_search",
+            "type": "text"
+          },
+          "da": {
+            "analyzer": "danish",
+            "type": "text"
+          },
+          "de": {
+            "analyzer": "german",
+            "type": "text"
+          },
+          "dehyphenated": {
+            "analyzer": "dehyphenation",
+            "type": "text"
+          },
+          "en": {
+            "analyzer": "english",
+            "type": "text"
+          },
+          "fr": {
+            "analyzer": "french",
+            "type": "text"
+          },
+          "keyword": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "TitleAuthor": {
+        "analyzer": "titles",
+        "fields": {
+          "da": {
+            "analyzer": "danish",
+            "type": "text"
+          },
+          "de": {
+            "analyzer": "german",
+            "type": "text"
+          },
+          "dehyphenated": {
+            "analyzer": "dehyphenation",
+            "type": "text"
+          },
+          "en": {
+            "analyzer": "english",
+            "type": "text"
+          },
+          "fr": {
+            "analyzer": "french",
+            "type": "text"
+          },
+          "keyword": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "TitleSort": {
+        "type": "keyword"
+      },
+      "Translators": {
+        "properties": {
+          "Id": {
+            "type": "integer"
+          },
+          "Identifier": {
+            "type": "keyword"
+          },
+          "Ids": {
+            "type": "keyword"
+          },
+          "Name": {
+            "analyzer": "standard_asciifolding",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "Type": {
+            "type": "keyword"
+          }
+        }
+      },
+      "UnderProduction": {
+        "null_value": false,
+        "type": "boolean"
+      },
+      "author_sort": {
+        "type": "keyword"
+      },
+      "dk": {
+        "path": "Classification",
+        "type": "alias"
+      },
+      "dk_sort": {
+        "path": "Classification.keyword",
+        "type": "alias"
+      },
+      "em": {
+        "path": "Index.em",
+        "type": "alias"
+      },
+      "em_sort": {
+        "path": "Index.em.keyword",
+        "type": "alias"
+      },
+      "fl": {
+        "path": "Publishers.Name",
+        "type": "alias"
+      },
+      "fl_sort": {
+        "path": "Publishers.Name.keyword",
+        "type": "alias"
+      },
+      "fo": {
+        "path": "Index.fo",
+        "type": "alias"
+      },
+      "fo_sort": {
+        "path": "Index.fo.keyword",
+        "type": "alias"
+      },
+      "for": {
+        "path": "Authors.Name",
+        "type": "alias"
+      },
+      "for_sort": {
+        "path": "Authors.Name.keyword",
+        "type": "alias"
+      },
+      "fv": {
+        "path": "ContractionLevel",
+        "type": "alias"
+      },
+      "fv_sort": {
+        "path": "ContractionLevel",
+        "type": "alias"
+      },
+      "gen": {
+        "path": "Genre",
+        "type": "alias"
+      },
+      "gen_sort": {
+        "path": "Genre",
+        "type": "alias"
+      },
+      "hs": {
+        "path": "MainLanguage",
+        "type": "alias"
+      },
+      "hs_sort": {
+        "path": "MainLanguage",
+        "type": "alias"
+      },
+      "id": {
+        "path": "LibraryIds",
+        "type": "alias"
+      },
+      "il": {
+        "path": "Narrators.Name",
+        "type": "alias"
+      },
+      "il_sort": {
+        "path": "Narrators.Name.keyword",
+        "type": "alias"
+      },
+      "is": {
+        "path": "Isbn",
+        "type": "alias"
+      },
+      "is_sort": {
+        "path": "Isbn.keyword",
+        "type": "alias"
+      },
+      "ix": {
+        "path": "Lix",
+        "type": "alias"
+      },
+      "ix_sort": {
+        "path": "Lix",
+        "type": "alias"
+      },
+      "ko": {
+        "path": "Cooperatives",
+        "type": "alias"
+      },
+      "ko_sort": {
+        "path": "Cooperatives.keyword",
+        "type": "alias"
+      },
+      "lix": {
+        "path": "Lix",
+        "type": "alias"
+      },
+      "lix_sort": {
+        "path": "Lix",
+        "type": "alias"
+      },
+      "ne": {
+        "path": "Index.ne",
+        "type": "alias"
+      },
+      "ne_sort": {
+        "path": "Index.ne.keyword",
+        "type": "alias"
+      },
+      "no": {
+        "path": "Notes",
+        "type": "alias"
+      },
+      "no_sort": {
+        "path": "Notes.keyword",
+        "type": "alias"
+      },
+      "ou": {
+        "path": "OriginalLanguage",
+        "type": "alias"
+      },
+      "ou_sort": {
+        "path": "OriginalLanguage",
+        "type": "alias"
+      },
+      "oå": {
+        "path": "OriginalPublishedYear",
+        "type": "alias"
+      },
+      "oå_sort": {
+        "path": "OriginalPublishedYear",
+        "type": "alias"
+      },
+      "po": {
+        "path": "Contributors",
+        "type": "alias"
+      },
+      "po_sort": {
+        "path": "Contributors.keyword",
+        "type": "alias"
+      },
+      "på": {
+        "path": "AddedYear",
+        "type": "alias"
+      },
+      "på_sort": {
+        "path": "AddedYear",
+        "type": "alias"
+      },
+      "ra": {
+        "path": "AgeGroup",
+        "type": "alias"
+      },
+      "ra_sort": {
+        "path": "AgeGroup",
+        "type": "alias"
+      },
+      "score_boost": {
+        "ignore_malformed": true,
+        "null_value": 0,
+        "type": "double"
+      },
+      "se": {
+        "path": "SeriesTitle",
+        "type": "alias"
+      },
+      "se_sort": {
+        "path": "SeriesTitle.keyword",
+        "type": "alias"
+      },
+      "seriestitle": {
+        "path": "SeriesTitle",
+        "type": "alias"
+      },
+      "sp": {
+        "path": "LanguageCodes",
+        "type": "alias"
+      },
+      "sp_sort": {
+        "path": "LanguageCodes",
+        "type": "alias"
+      },
+      "speak": {
+        "path": "Narrators.Name",
+        "type": "alias"
+      },
+      "ti": {
+        "path": "Title",
+        "type": "alias"
+      },
+      "ti_sort": {
+        "path": "Title.keyword",
+        "type": "alias"
+      },
+      "tid": {
+        "path": "DurationHours",
+        "type": "alias"
+      },
+      "tid_sort": {
+        "path": "Duration",
+        "type": "alias"
+      },
+      "til": {
+        "path": "Title",
+        "type": "alias"
+      },
+      "til_sort": {
+        "path": "TitleSort",
+        "type": "alias"
+      },
+      "title": {
+        "path": "Title",
+        "type": "alias"
+      },
+      "title_sort": {
+        "path": "TitleSort",
+        "type": "alias"
+      },
+      "år": {
+        "path": "PublishedYear",
+        "type": "alias"
+      },
+      "år_sort": {
+        "path": "PublishedYear",
+        "type": "alias"
+      }
+    }
+  },
+  "settings": {
+    "index": {
+      "analysis": {
+        "analyzer": {
+          "autocomplete": {
+            "char_filter": [
+              "dashes",
+              "quotes"
+            ],
+            "filter": [
+              "lowercase"
+            ],
+            "tokenizer": "autocomplete"
+          },
+          "autocomplete_search": {
+            "char_filter": [
+              "dashes",
+              "quotes"
+            ],
+            "tokenizer": "lowercase"
+          },
+          "danish": {
+            "char_filter": [
+              "dashes",
+              "quotes"
+            ],
+            "filter": [
+              "lowercase",
+              "danish_synonyms",
+              "danish_stop",
+              "danish_stemmer"
+            ],
+            "tokenizer": "dashes"
+          },
+          "dehyphenation": {
+            "filter": [
+              "lowercase",
+              "dehyphenation_shingle",
+              "dehyphenation_filter"
+            ],
+            "tokenizer": "standard"
+          },
+          "isbn": {
+            "char_filter": [
+              "isbn_filter"
+            ],
+            "filter": [
+              "lowercase"
+            ],
+            "tokenizer": "keyword"
+          },
+          "semicolon": {
+            "tokenizer": "semicolon",
+            "type": "custom"
+          },
+          "standard_asciifolding": {
+            "filter": [
+              "lowercase",
+              "asciifolding"
+            ],
+            "tokenizer": "standard"
+          },
+          "subject_analyzer": {
+            "tokenizer": "subject_tokenizer"
+          },
+          "titles": {
+            "char_filter": [
+              "dashes",
+              "quotes"
+            ],
+            "filter": [
+              "lowercase"
+            ],
+            "tokenizer": "standard"
+          }
+        },
+        "char_filter": {
+          "dashes": {
+            "pattern": "([^ ]+)-(?=[^ ])",
+            "replacement": "$1",
+            "type": "pattern_replace"
+          },
+          "isbn_filter": {
+            "pattern": "(\\d+)-(?=\\d)",
+            "replacement": "$1",
+            "type": "pattern_replace"
+          },
+          "quotes": {
+            "pattern": "([^ ]+)['\"](?=[^ ])",
+            "replacement": "$1",
+            "type": "pattern_replace"
+          }
+        },
+        "filter": {
+          "danish_stemmer": {
+            "language": "danish",
+            "type": "stemmer"
+          },
+          "danish_stop": {
+            "stopwords": "_danish_",
+            "type": "stop"
+          },
+          "danish_synonyms": {
+            "synonyms_path": "./extras/synonyms_da.txt",
+            "type": "synonym"
+          },
+          "dehyphenation_filter": {
+            "pattern": " ",
+            "replacement": "",
+            "type": "pattern_replace"
+          },
+          "dehyphenation_shingle": {
+            "max_shingle_size": "3",
+            "min_shingle_size": "2",
+            "output_unigrams": "true",
+            "type": "shingle"
+          }
+        },
+        "tokenizer": {
+          "autocomplete": {
+            "max_gram": "20",
+            "min_gram": "2",
+            "token_chars": [
+              "letter"
+            ],
+            "type": "edge_ngram"
+          },
+          "dashes": {
+            "pattern": "-",
+            "type": "pattern"
+          },
+          "semicolon": {
+            "pattern": ";",
+            "type": "pattern"
+          },
+          "subject_tokenizer": {
+            "pattern": ";",
+            "type": "simple_pattern_split"
+          }
+        }
+      },
+      "auto_expand_replicas": "0-all",
+      "number_of_shards": "1"
+    }
+  }
+}

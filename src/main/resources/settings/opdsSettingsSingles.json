@@ -1,0 +1,90 @@
+{
+  "index.blocks.read_only_allow_delete": "false",
+  "index.priority": "1",
+  "index.query.default_field": [
+    "*"
+  ],
+  "index.refresh_interval": "1s",
+  "index.write.wait_for_active_shards": "1",
+  "index.routing.allocation.include._tier_preference": "data_content",
+  "index.auto_expand_replicas": "0-all",
+  "index.analysis.filter.dehyphenation_filter.pattern": " ",
+  "index.analysis.filter.dehyphenation_filter.type": "pattern_replace",
+  "index.analysis.filter.dehyphenation_filter.replacement": "",
+  "index.analysis.filter.dehyphenation_shingle.max_shingle_size": "3",
+  "index.analysis.filter.dehyphenation_shingle.min_shingle_size": "2",
+  "index.analysis.filter.dehyphenation_shingle.output_unigrams": "true",
+  "index.analysis.filter.dehyphenation_shingle.type": "shingle",
+  "index.analysis.char_filter.dashes.pattern": "([^ ]+)-(?=[^ ])",
+  "index.analysis.char_filter.dashes.type": "pattern_replace",
+  "index.analysis.char_filter.dashes.replacement": "$1",
+  "index.analysis.char_filter.isbn_filter.pattern": "(\\d+)-(?=\\d)",
+  "index.analysis.char_filter.isbn_filter.type": "pattern_replace",
+  "index.analysis.char_filter.isbn_filter.replacement": "$1",
+  "index.analysis.char_filter.quotes.pattern": "([^ ]+)['\"](?=[^ ])",
+  "index.analysis.char_filter.quotes.type": "pattern_replace",
+  "index.analysis.char_filter.quotes.replacement": "$1",
+  "index.analysis.analyzer.danish.filter": [
+    "lowercase"
+  ],
+  "index.analysis.analyzer.danish.char_filter": [
+    "dashes",
+    "quotes"
+  ],
+  "index.analysis.analyzer.danish.tokenizer": "dashes",
+  "index.analysis.analyzer.subject_analyzer.tokenizer": "subject_tokenizer",
+  "index.analysis.analyzer.dehyphenation.filter": [
+    "lowercase",
+    "dehyphenation_shingle",
+    "dehyphenation_filter"
+  ],
+  "index.analysis.analyzer.dehyphenation.tokenizer": "standard",
+  "index.analysis.analyzer.autocomplete.filter": [
+    "lowercase"
+  ],
+  "index.analysis.analyzer.autocomplete.char_filter": [
+    "dashes",
+    "quotes"
+  ],
+  "index.analysis.analyzer.autocomplete.tokenizer": "autocomplete",
+  "index.analysis.analyzer.standard_asciifolding.filter": [
+    "lowercase",
+    "asciifolding"
+  ],
+  "index.analysis.analyzer.standard_asciifolding.tokenizer": "standard",
+  "index.analysis.analyzer.isbn.filter": [
+    "lowercase"
+  ],
+  "index.analysis.analyzer.isbn.char_filter": [
+    "isbn_filter"
+  ],
+  "index.analysis.analyzer.isbn.tokenizer": "keyword",
+  "index.analysis.analyzer.titles.filter": [
+    "lowercase"
+  ],
+  "index.analysis.analyzer.titles.char_filter": [
+    "dashes",
+    "quotes"
+  ],
+  "index.analysis.analyzer.titles.tokenizer": "standard",
+  "index.analysis.analyzer.autocomplete_search.char_filter": [
+    "dashes",
+    "quotes"
+  ],
+  "index.analysis.analyzer.autocomplete_search.tokenizer": "lowercase",
+  "index.analysis.analyzer.semicolon.type": "custom",
+  "index.analysis.analyzer.semicolon.tokenizer": "semicolon",
+  "index.analysis.tokenizer.subject_tokenizer.pattern": ";",
+  "index.analysis.tokenizer.subject_tokenizer.type": "simple_pattern_split",
+  "index.analysis.tokenizer.dashes.pattern": "-",
+  "index.analysis.tokenizer.dashes.type": "pattern",
+  "index.analysis.tokenizer.autocomplete.token_chars": [
+    "letter"
+  ],
+  "index.analysis.tokenizer.autocomplete.min_gram": "2",
+  "index.analysis.tokenizer.autocomplete.type": "edge_ngram",
+  "index.analysis.tokenizer.autocomplete.max_gram": "20",
+  "index.analysis.tokenizer.semicolon.pattern": ";",
+  "index.analysis.tokenizer.semicolon.type": "pattern",
+  "index.number_of_replicas": "0"
+}
